@@ -7,101 +7,161 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:id="@+id/lnInfor"
+        android:id="@+id/lnTabLayout"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/title"
+        android:layout_height="30dp"
+        android:weightSum="1.2"
         app:layout_constraintEnd_toStartOf="@+id/end"
         app:layout_constraintStart_toStartOf="@+id/start"
-        app:layout_constraintTop_toTopOf="@+id/top">
+        app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/btnHome"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.2"
+            android:src="@drawable/ic_avatar" />
+
+        <ImageView
+            android:id="@+id/btnFriend"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.2"
+            android:src="@drawable/ic_avatar" />
+
+        <ImageView
+            android:id="@+id/btnShort"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.2"
+            android:src="@drawable/ic_avatar" />
+
+        <ImageView
+            android:id="@+id/btnProfile"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.2"
+            android:src="@drawable/ic_avatar" />
+
+        <ImageView
+            android:id="@+id/btnNotification"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.2"
+            android:src="@drawable/ic_avatar" />
+
+        <ImageView
+            android:id="@+id/btnMore"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.2"
+            android:src="@drawable/ic_avatar" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/lnTotal"
+    <ScrollView
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/line"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toStartOf="@+id/end"
         app:layout_constraintStart_toStartOf="@+id/start"
-        app:layout_constraintTop_toTopOf="@+id/topReact">
+        app:layout_constraintTop_toBottomOf="@id/lnTabLayout">
 
-    </LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:id="@+id/lnReact"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/botReact"
-        app:layout_constraintEnd_toStartOf="@+id/end"
-        app:layout_constraintStart_toStartOf="@+id/start"
-        app:layout_constraintTop_toBottomOf="@+id/line">
+            <LinearLayout
+                android:id="@+id/lnInfor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                app:layout_constraintTop_toTopOf="parent">
 
-    </LinearLayout>
+                <ImageView
+                    android:id="@+id/imgAvatar"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/ic_avatar" />
 
-    <LinearLayout
-        android:id="@+id/lnNew"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/botView"
-        app:layout_constraintEnd_toStartOf="@+id/end"
-        app:layout_constraintStart_toStartOf="@+id/start"
-        app:layout_constraintTop_toTopOf="@+id/topView">
+                <LinearLayout
+                    android:id="@+id/lnInforChild"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="1">
 
-    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tvUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:text="Manchester United"
+                        android:textColor="#808080"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/top"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.06" />
+                    <TextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:text="Yesterday at 11:11 PM"
+                        android:textColor="#808080"
+                        android:textSize="8sp" />
+                </LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.125" />
+                <ImageView
+                    android:id="@+id/imgMore"
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/ic_more" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/topView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.135" />
+                <ImageView
+                    android:id="@+id/imgClose"
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/ic_close" />
+            </LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/botView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
+            <LinearLayout
+                android:id="@+id/lnNew"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/lnInfor">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/topReact"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.51" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_new" />
+            </LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/line"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.555" />
+            <LinearLayout
+                android:id="@+id/lnTotal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/lnNew">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/botReact"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnReact"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/lnTotal">
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/start"
@@ -116,5 +176,4 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.98" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
