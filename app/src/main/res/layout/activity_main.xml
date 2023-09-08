@@ -11,52 +11,89 @@
         android:layout_width="0dp"
         android:layout_height="30dp"
         android:layout_marginTop="10dp"
-        android:weightSum="1.2"
+        android:weightSum="1.1"
         app:layout_constraintEnd_toStartOf="@+id/end"
         app:layout_constraintStart_toStartOf="@+id/start"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
+        <ToggleButton
             android:id="@+id/btnHome"
             android:layout_width="0dp"
             android:layout_height="30dp"
-            android:layout_weight="0.2"
-            android:src="@drawable/home_selected" />
+            android:layout_weight="0.1"
+            android:background="@drawable/home_selected"
+            android:textOff=""
+            android:textOn="" />
 
-        <ImageView
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1" />
+
+        <ToggleButton
             android:id="@+id/btnFriend"
             android:layout_width="0dp"
             android:layout_height="30dp"
-            android:layout_weight="0.2"
-            android:src="@drawable/friends_selected" />
+            android:layout_weight="0.1"
+            android:background="@drawable/friends_selected"
+            android:textOff=""
+            android:textOn="" />
 
-        <ImageView
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1" />
+
+        <ToggleButton
             android:id="@+id/btnShort"
             android:layout_width="0dp"
             android:layout_height="30dp"
-            android:layout_weight="0.2"
-            android:src="@drawable/media_selected" />
+            android:layout_weight="0.1"
+            android:background="@drawable/media_selected"
+            android:textOff=""
+            android:textOn="" />
 
-        <ImageView
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1" />
+
+        <ToggleButton
             android:id="@+id/btnProfile"
             android:layout_width="0dp"
             android:layout_height="30dp"
-            android:layout_weight="0.2"
-            android:src="@drawable/profile_selected" />
+            android:layout_weight="0.1"
+            android:background="@drawable/profile_selected"
+            android:textOff=""
+            android:textOn="" />
 
-        <ImageView
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1" />
+
+        <ToggleButton
             android:id="@+id/btnNotification"
             android:layout_width="0dp"
             android:layout_height="30dp"
-            android:layout_weight="0.2"
-            android:src="@drawable/notifi_selected" />
+            android:layout_weight="0.1"
+            android:background="@drawable/notifi_selected"
+            android:textOff=""
+            android:textOn="" />
 
-        <ImageView
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1" />
+
+        <ToggleButton
             android:id="@+id/btnMore"
             android:layout_width="0dp"
             android:layout_height="30dp"
-            android:layout_weight="0.2"
-            android:src="@drawable/more_selected" />
+            android:layout_weight="0.1"
+            android:background="@drawable/more_selected"
+            android:textOff=""
+            android:textOn="" />
     </LinearLayout>
 
     <ScrollView
